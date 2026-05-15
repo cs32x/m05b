@@ -1,4 +1,4 @@
-### m05b/bookshelf1.py
+### m05/bookshelf1.py
 
 def my_replace(s, old, new):
     """Returns a string replacing all instances of old with new."""
