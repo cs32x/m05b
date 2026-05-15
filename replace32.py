@@ -17,21 +17,25 @@ def my_replace(s, old, new):
     return new_s
 
 
-my_book = input('What book would you like to read? ')
-print()   # print a blank line
+def main():
+    my_book = input('What book would you like to read? ')
+    print()   # print a blank line
 
-with open('txts/' + my_book) as my_open_book:
-    while True:
-        the_line = my_open_book.readline()
+    with open('txts/' + my_book) as my_open_book:
+        while True:
+            the_line = my_open_book.readline()
 
-        # Having some fun with text substitution
-        the_line = my_replace(the_line, 'Cat', '\N{cat face with wry smile}')
-        the_line = my_replace(the_line, 'Hat', '\N{top hat}')
+            # Having some fun with text substitution
+            the_line = my_replace(the_line, 'Cat', '\N{cat face with wry smile}')
+            the_line = my_replace(the_line, 'Hat', '\N{top hat}')
 
-        print(the_line, end='')
+            print(the_line, end='')
 
-        # Check for EOF
-        if the_line == '':
-            break
+            # Check for EOF
+            if the_line == '':
+                break
 
-print("\nThe End.")
+    print("\nThe End.")
+
+if __name__ == '__main__':
+    main()
